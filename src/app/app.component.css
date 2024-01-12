@@ -1,0 +1,22 @@
+header{
+    padding: 10px;
+    background-color: black;
+}
+
+header nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul{
+    display: flex;
+    gap: 10px;
+}
+li{
+    list-style-type: none;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+}

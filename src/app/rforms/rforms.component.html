@@ -1,0 +1,22 @@
+<!-- <p>rforms works!</p> -->
+
+<form [formGroup]="reactiveform" (ngSubmit)="loginform()">
+    <fieldset>
+        <legend>Reactive Form</legend>
+    <label>
+        Username Name:
+        <input type="text" formControlName="user">
+        <span *ngIf="user && user.invalid && user.touched" [ngStyle]="{'color':'red'}">Invailed Inputs!</span>
+    </label>
+    <label>
+        Email:
+        <input type="text" formControlName="email">
+    </label>
+    <label>
+        Password:
+        <input type="text" formControlName="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" >
+    </label>
+    
+     <button type="submit" [disabled]="reactiveform.invalid">Submit</button>
+    </fieldset>
+</form>
